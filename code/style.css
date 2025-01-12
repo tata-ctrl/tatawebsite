@@ -1,0 +1,129 @@
+*{
+    margin: 0;  
+    padding : 0;      
+
+}
+
+body { 
+    font-family:'montserrat', sans-serif;
+    overflow-x:hidden;
+}
+/*navbar*/
+nav{
+        display: flex;
+        background-color: blueviolet;
+        justify-content: space-around;
+        padding: 20px 0;
+    
+        color: rgb(255, 255, 255);
+        align-items: center;
+        
+
+
+    }
+    nav ul{
+        display: flex;
+        list-style: none;
+        width: 40%;
+        justify-content: space-between;
+
+    }
+
+nav ul li a{
+        color: antiquewhite;
+        text-decoration: none;
+        font-size: small;
+    }
+
+/*hamburger menu*/
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 28px;
+    justify-content: space-between;
+    position: sticky;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 48px;
+    height: 35px;
+    left: -10px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: aliceblue;
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+
+/* Hamburger menu animation */
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+}
+.menu-toggle input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg) translate(9px, -9px);
+}
+
+
+/*responsive breakpoints*/
+
+/*ukuran mobile*/
+@media screen and (max-width: 576px) {
+    .menu-toggle {
+        display: flex;
+
+    }
+
+    nav ul {
+        position: absolute;
+        right:0;
+        top: 0;
+        width: 90%;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color: blueviolet;
+        opacity: 60%;
+        z-index: -1;
+        transform: translateX(100%);
+        transition:all 1s;
+        opacity: 0;
+
+
+    }nav ul.slide{
+        transform: translateX(0);
+        opacity: 1;
+
+    }
+
+
+}
+
+    
+    
+}
+ 
+    } {
+        
+    } {
+        
+    }
+    }
+
+
